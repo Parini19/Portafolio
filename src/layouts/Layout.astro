@@ -3,23 +3,17 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "@fontsource-variable/montserrat";
 
-interface Props {
-	title: string;
-	description: string;
-}
-
-const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
+		<meta name="description" content="Contrata a Guillermo para obtener soluciones de software innovadoras y seguras. Especializado en desarrollo back-end"/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/Logo.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>Guillermo Parini - Software Engineer</title>
 		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 	</head>
 	<body class="bg-gradient-to-b from-black to-[#171a4a]">
