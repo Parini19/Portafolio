@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "@fontsource-variable/montserrat";
 
@@ -31,6 +32,7 @@ const { title, description } = Astro.props;
 
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>

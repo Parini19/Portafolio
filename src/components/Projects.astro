@@ -1,0 +1,56 @@
+---
+import React from "./icons/React.astro";
+const TAGS = {
+    REACT: {
+        name: "React",
+        class: "bg-black text-white",
+        icon: React,
+    },
+    TYPESCRIPT: {
+        name: "React",
+        class: "bg-black text-white",
+        icon: React,
+    },
+    CSHARP: {
+        name: "React",
+        class: "bg-black text-white",
+        icon: React,
+    },
+};
+
+const PROJECTS = [
+    {
+        title: "Agenda Web",
+        description:
+            "Creado con csharp, react y typescript. Es una angeda web para diferentes usuarios que deseen optimizar su tiempo de una manera facil y segura.",
+        link: "https://zealous-meadow-0b88b751e.5.azurestaticapps.net",
+        github: "https://github.com/lsalasr26/Task_Manager_FrontEnd/tree/calendar",
+        image: "/projects/Agenda.webp",
+        tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.CSHARP],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ title, description, tags, image }) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-400 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul>
+                {tags.map((tag) => (
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class}`}>
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt={`Captura del proyecto ${image}`}
+            />
+        </article>
+    ))
+}

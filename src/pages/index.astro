@@ -8,16 +8,19 @@ import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import Notebook from "../components/icons/Notebook.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout 
-title="Parini Dev"
+title="Parini - Software Engineer"
 description="Contrata a Guillermo para obtener soluciones de software innovadoras y seguras. Especializado en desarrollo back-end"
 >
-	<main>
-		<SectionContainer class="py-44 pb-24">
+	<main class="px-4">
+
+		<SectionContainer class="py-44 pb-32">
 			<h1
-				class="text-white text-5xl fond-bold flex flex-row gap-x-4 pb-10"
+				class="text-white text-3xl md:text-4xl lg:text-5xl fond-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
 			>
 				Hey, soy Guillermo
 				<a
@@ -29,32 +32,41 @@ description="Contrata a Guillermo para obtener soluciones de software innovadora
 					<Badge>Software Developer</Badge>
 				</a>
 			</h1>
-			<h2 class="text-2xl text-wrap">
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[800px]">
 				Ingeniero en desarrollo de software, enfocado en tecnologías
 				backend, abierto a cualquier reto, con facilidad de comunicación
 				y adaptabilidad.
 			</h2>
-			<nav class="flex gap-x-2 mt-8">
+			<nav class="flex gap-2 mt-8 flex-wrap">
 				<Social href="https://www.linkedin.com/in/guillermo-parini-miranda-5111852b6">
-					<LinkedInIcon class="w-6 h-6" />
+					<LinkedInIcon class="size-4 md:size-6" />
 					LinkedIn
 				</Social>
 				<Social href="https://github.com/Parini19">
-					<GitHubIcon class="w-6 h-6" />
+					<GitHubIcon class="size-4 md:size-6" />
 					GitHub
 				</Social>
-				<Social href="">
-					<MailIcon class="w-6 h-6" />
+				<Social href="mailto:andreyparini19@gmail.com">
+					<MailIcon class="size-4 md:size-6" />
 					gparinim@gmail.com
 				</Social>
 			</nav>
 		</SectionContainer>
+
 		<SectionContainer id="experiencia">
-			<h2 class="text-2xl semifont-bold mb-6 flex gap-x-2 items-center">
+			<h2 class="text-3xl semifont-bold mb-6 flex gap-x-2 items-center">
 				<Notebook class="size-7"/>
 				Experiencia Académica
 			</h2>
 			<Experience/>
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl semifont-bold mb-6 flex gap-x-2 items-center">
+				<Code class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
