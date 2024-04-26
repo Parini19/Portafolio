@@ -1,0 +1,50 @@
+<button
+    type="button"
+    data-twe-ripple-init
+    data-twe-ripple-color="light"
+    class="!fixed bottom-5 end-5 hidden rounded-full bg-yellow-500 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-yellow-400 hover:shadow-lg focus:bg-yellow-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-500 active:shadow-lg"
+    id="btn-back-to-top"
+>
+    <span class="[&>svg]:w-4">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="currentColor"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"></path>
+        </svg>
+    </span>
+</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Obtener el botón de regreso al principio
+        const btnBackToTop = document.getElementById("btn-back-to-top");
+
+        // Verificar si btnBackToTop no es null
+        if (btnBackToTop) {
+            // Agregar un listener para el evento click
+            btnBackToTop.addEventListener("click", function () {
+                // Desplazarse hacia arriba con una animación suave
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            });
+
+            // Mostrar el botón cuando el usuario se desplaza hacia abajo
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 100) {
+                    btnBackToTop.classList.remove("hidden");
+                } else {
+                    btnBackToTop.classList.add("hidden");
+                }
+            });
+        }
+    });
+</script>

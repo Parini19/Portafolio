@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
 import SectionContainer from "../components/SectionContainer.astro"
 import Social from "../components/Social.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
@@ -10,7 +9,7 @@ import Experience from "../components/Experience.astro";
 import Notebook from "../components/icons/Notebook.astro";
 import Code from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
-import Carousel from "../components/Carousel.astro";
+import ButtonTop from "../components/ButtonTop.astro";
 ---
 
 <Layout 
@@ -19,23 +18,16 @@ description="Contrata a Guillermo para obtener soluciones de software innovadora
 >
 	<main class="px-4">
 
-		<SectionContainer class="py-44 pb-32">
+		<SectionContainer class="h-screen pt-80">
 			<h1
 				class="text-white text-3xl md:text-4xl lg:text-5xl fond-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
 			>
-				Hey, soy Guillermo
-				<a
-					href="https://www.linkedin.com/in/guillermo-parini-miranda-5111852b6"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-				>
-					<Badge>Software Developer</Badge>
-				</a>
+				Hey! soy <strong class="text-bold text-yellow-400">Guillermo</strong>
+				
 			</h1>
 			<h2 class="text-xl lg:text-2xl text-wrap max-w-[800px]">
-				Ingeniero en desarrollo de software, enfocado en tecnologías
-				backend, abierto a cualquier reto, con facilidad de comunicación
+				Ingeniero en desarrollo de <strong class="text-bold text-yellow-400">Software</strong>, enfocado en tecnologías
+				<strong class="text-bold text-yellow-400">Backend</strong>, abierto a cualquier reto, con facilidad de comunicación
 				y adaptabilidad.
 			</h2>
 			<nav class="flex gap-2 mt-8 flex-wrap">
@@ -67,8 +59,8 @@ description="Contrata a Guillermo para obtener soluciones de software innovadora
 				<Code class="size-7"/>
 				Proyectos
 			</h2>
-			<Carousel/>
 			<Projects />
 		</SectionContainer>
+		<ButtonTop/>
 	</main>
 </Layout>

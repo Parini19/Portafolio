@@ -1,9 +1,18 @@
 ---
-import Social from "./Social.astro";
-import GitHub from "./icons/GitHub.astro";
 import React from "./icons/React.astro";
 import TypeScript from "./icons/TypeScript.astro";
 import CSharp from "./icons/CSharp.astro";
+import Unity from "./icons/Unity.astro";
+import NetFramework from "./icons/NetFramework.astro";
+import SqlServer from "./icons/SqlServer.astro"
+import Html from "./icons/Html.astro";
+import Css from "./icons/Css.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import MongoDB from "./icons/MongoDB.astro";
+
+
+
+
 const TAGS = {
     REACT: {
         name: "React",
@@ -20,6 +29,41 @@ const TAGS = {
         class: "bg-black text-white",
         icon: CSharp,
     },
+    UNITY: {
+        name: "Unity",
+        class: "bg-black text-white",
+        icon: Unity,
+    },
+    NETFRAMEWORK: {
+        name: ".Net Framework",
+        class: "bg-black text-white",
+        icon: NetFramework,
+    },
+    SQLSERVER: {
+        name: "Microsoft SQL Server",
+        class: "bg-black text-white",
+        icon: SqlServer,
+    },
+    HTML: {
+        name: "HTML 5",
+        class: "bg-black text-white",
+        icon: Html,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-black text-white",
+        icon: Css,
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-black text-white",
+        icon: JavaScript,
+    },
+    MONGODB: {
+        name: "MongoDB",
+        class: "bg-black text-white",
+        icon: MongoDB,
+    },
 };
 
 const AGENDA = [
@@ -33,11 +77,116 @@ const AGENDA = [
         tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.CSHARP],
     },
 ];
+
+const CENFOMON = [
+    {
+        title: "Cenfomón - Video Juego 2D",
+        description: "Creado con unity y csharp. Es un vídeo juego RPG 2D creado a base de patrones de diseño.",
+        image: "/projects/Cenfomon.webp",
+        tags: [TAGS.UNITY, TAGS.CSHARP]
+    }
+]
+
+const LEARNCENTER = [
+    {
+        title: "Learning Center",
+        description: "Creado con Microsoft .Net Framework, CSharp y Microsoft SQL Server. Plataforma de cursos y contenido para aprender algo nuevo, dependiendo de tus intereses, verificación de cuenta, panel de administración y muchos más.",
+        image: "/projects/LearnCenter.webp",
+        tags: [TAGS.NETFRAMEWORK, TAGS.CSHARP, TAGS.SQLSERVER]
+    }
+]
+
+const PETSWORLD = [
+    {
+        title: "Pets World",
+        description: "Creado con HTML, CSS, JavaScript y MongoDB. Plataforma para veterinarias donde pueden administrar sus servicios, citas de clientes y llevar un registro de sus mascotas.",
+        image: "/projects/PetsWorld.webp",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.MONGODB]
+    }
+]
 ---
 
 {
     AGENDA.map(({ title, description, tags, image }) => (
-        <article>
+        <article class="py-10">
+            <h3 class="text-2xl font-semibold text-yellow-400 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-3">
+                {tags.map((tag) => (
+                    <li>
+                        <span
+                            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}
+                        >
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt={`Captura del proyecto ${image}`}
+            />
+        </article>
+    ))    
+}
+
+{
+    CENFOMON.map(({ title, description, tags, image }) => (
+        <article class="py-10">
+            <h3 class="text-2xl font-semibold text-yellow-400 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-3">
+                {tags.map((tag) => (
+                    <li>
+                        <span
+                            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}
+                        >
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt={`Captura del proyecto ${image}`}
+            />
+        </article>
+    ))
+}
+
+{
+    LEARNCENTER.map(({ title, description, tags, image }) => (
+        <article class="py-10">
+            <h3 class="text-2xl font-semibold text-yellow-400 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-3">
+                {tags.map((tag) => (
+                    <li>
+                        <span
+                            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}
+                        >
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt={`Captura del proyecto ${image}`}
+            />
+        </article>
+    ))
+}
+
+{
+    PETSWORLD.map(({ title, description, tags, image }) => (
+        <article class="py-10">
             <h3 class="text-2xl font-semibold text-yellow-400 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
             <ul class="flex gap-x-2 flex-row mb-3">
