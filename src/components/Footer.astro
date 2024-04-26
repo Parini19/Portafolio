@@ -8,27 +8,25 @@ import X from "./icons/X.astro";
     class="rounded-lg shadow m-4 bg-black/20 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mb-10"
 >
     <div
-        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+        class="w-full mx-auto max-w-screen-xl p-4 flex flex-col md:flex-row md:items-center md:justify-between"
     >
         <span class="text-sm sm:text-center text-yellow-400/90"
             >© 2024 <a href="" class="hover:underline">Parini Dev</a>. Casi
-            todos los derechos reservados.
-        </span>
-        <ul
-            class="flex flex-wrap items-center mt-3 text-sm font-medium text-white/90 sm:mt-0"
+            todos los derechos reservados.</span
         >
-            <li>
-                <a href=""
-                    ><X class="size-5 hover:scale-125 mr-4" /></a
-                >
+        <ul
+            class="flex items-center mt-3 text-sm font-medium text-white/90 sm:mt-0"
+        >
+            <li class="mr-4">
+                <a href=""><X class="size-4 md:size-6 hover:scale-125" /></a>
             </li>
-            <li>
+            <li class="mr-4">
                 <a href="https://www.instagram.com/gparini/"
-                    ><Instagram class="size-5 hover:scale-125 mr-2" /></a
+                    ><Instagram class="size-4 md:size-6 hover:scale-125" /></a
                 >
             </li>
             <li>
-                <a href=""><Discord class="size-5 hover:scale-125 ml-3" /></a>
+                <a href=""><Discord class="size-4 md:size-6 hover:scale-125" /></a>
             </li>
         </ul>
     </div>

@@ -1,0 +1,29 @@
+---
+import User from "./icons/User.astro"
+---
+<section class="w-full flex flex-col gap-20 text-[var(--text-color)]">
+    <h2 class="text-3xl semifont-bold mb-6 flex gap-x-2 items-center">
+        <User class="size-7"/>
+        Sobre mí
+    </h2>
+<div class="pl-8 border-dashed border-l-4 border-yellow-400">
+    <div class="flex flex-col gap-10 p-4 rounded-lg bg-[#12153A]">
+        <div class="w-fit flex items-center gap-2 rounded-lg">
+            <img class="w-10 rounded-full h-auto" src="/public/images/Logo.jpg">
+            <h3 class="font-bold text-lg">
+                Guillermo Parini Miranda
+            </h3>
+        </div>
+        <div class="rounded-lg text-[var(--text-color-secondary)] text-lg">
+            <p>
+                Tengo 23 años, soy de <strong class="text-yellow-400"> Alajuela</strong> , <strong class="text-yellow-400"> Costa Rica</strong>. 
+                Actualmente estoy cursando la carrera universitaria de Ingeniería en Desarrollo de Software.
+                <br>
+                <br>
+                Mi interes por la programación surgio a través de los bots de <strong class="text-yellow-400"> Discord</strong>. Con el paso del tiempo fui escalando conocimientos y ahora, 
+                me encuentro desarrollando <strong class="text-yellow-400">interfaces</strong>, donde aplico y amplio mis habilidades.
+            </p>
+        </div>
+    </div>
+</div>
+</section>
