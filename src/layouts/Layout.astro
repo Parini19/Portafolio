@@ -23,17 +23,11 @@ const { title, description } = Astro.props;
 		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 	</head>
 	<body class="bg-gradient-to-b from-black to-[#171a4a]">
-		<!-- <div
-			class="absolute inset-0 z-10 h-full w-full items-center px-5 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#000E90_100%)]"
-		>
-		<div/> -->
-
-		<!-- <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> -->
-		
 
 		<Header />
 		<slot />
 		<Footer />
+		
 	</body>
 </html>
 <style is:global>
